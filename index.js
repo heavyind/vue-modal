@@ -1,10 +1,11 @@
 import modalStore from "./lib/store";
-import VueModal from "./lib/modal";
+import createVueModal from "./lib/modal";
 import e from "./util/e";
 
 
 const cfgDefault = {
   store: null,
+  baseDir: "@/component/modal/",
   scopeName: "modal",
   storeName: "modal",
   componentName: "modal"
@@ -23,13 +24,14 @@ export default {
 
     cfg.store.registerModule(cfg.storeName, modalStore);
 
-    Vue.component(cfg.componentName, VueModal);
+    Vue.component(cfg.componentName, createVueModal(Vue, cfg));
     Vue.mixin({
       computed: {
         [cfg.scopeName] () {
           return {
             open: this.$store.state.modal.open,
             show: () => { this.$store.dispatch(`${cfg.storeName}/show`); },
+            showWith: (c) => { this.$store.dispatch(`${cfg.storeName}/showWith`, c); },
             toggle: () => { this.$store.dispatch(`${cfg.storeName}/toggle`); }
           };
         }
