@@ -32,7 +32,8 @@ export default {
             open: this.$store.state.modal.open,
             show: () => { this.$store.dispatch(`${cfg.storeName}/show`); },
             showWith: (c) => { this.$store.dispatch(`${cfg.storeName}/showWith`, c); },
-            toggle: () => { this.$store.dispatch(`${cfg.storeName}/toggle`); }
+            toggle: () => { this.$store.dispatch(`${cfg.storeName}/toggle`); },
+            setComponentProps: (p) => { this.$store.dispatch(`${cfg.storeName}/setComponentProps`, p); }
           };
         }
       }
