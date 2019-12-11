@@ -28,6 +28,9 @@ export default {
           [cfg.scopeName] () {
             return {
               open: this.$store.state.modal.open,
+              settings: this.$store.state.modal.settings,
+              component: this.$store.state.modal.settings.component,
+              props: this.$store.state.modal.settings.props,
               show: () => { this.$store.dispatch(`${cfg.storeName}/show`); },
               showWith: (c) => { this.$store.dispatch(`${cfg.storeName}/showWith`, c); },
               hide: () => { this.$store.dispatch(`${cfg.storeName}/hide`); },
