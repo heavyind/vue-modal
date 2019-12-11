@@ -4,7 +4,9 @@
   "description": "A modal plugin for Vue projects",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "watch": "rimraf dist && rollup -c ./build/config.js --watch",
+    "build": "rimraf dist && rollup -c ./build/config.js"
   },
   "repository": {
     "type": "git",
