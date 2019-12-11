@@ -1,0 +1,29 @@
+{
+  "name": "vue-modal",
+  "version": "0.0.1",
+  "description": "A modal plugin for Vue projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heavyind/vue-modal.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "modal"
+  ],
+  "author": "Heavy Industries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heavyind/vue-modal/issues"
+  },
+  "homepage": "https://github.com/heavyind/vue-modal#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.9"
+  }
+}
