@@ -34,8 +34,6 @@ Via unpkg:
 <script src="https://unpkg.com/@heavyind/vue-modal"></script>
 ```
 
-To be written
-
 ## Usage
 
 ### Getting started
@@ -62,8 +60,8 @@ The default configuration object has the following form:
 ```
 { store: null,
   mixin: false, 
-  storeName: "modal",
-  scopeName: "modal"
+  mixinNamespace: "$modal"
+  storeNamespace: "modal"
 }
 ```
 
@@ -75,37 +73,57 @@ The Vuex store you intend to use.
 
 `mixin`
 
-A boolean representing whether or not the plugin should attach a global mixin that allows you to access properties and methods on each object, scoped to `scopeName`.
+A boolean representing whether or not the plugin should attach a global mixin that allows you to access properties and methods on each object. This mixin will be scoped to `mixinNamespace`, which defaults to `"$modal"`.
 
-`storeName`
+`storeNamespace`
 
 The namespace of the VueModal module in your Vuex store. Defaults to `"modal"`.
 
-`scopeName`
+`mixinNamespace`
 
-The name bound to each component that allows you to easily access modal properties and methods, should `mixin` be set to `true`. Defaults to `"modal"` (e.g., `this.modal.open`);
+The name bound to each component that allows you to easily access modal properties and methods, should `mixin` be set to `true`. Defaults to `"$modal"` (e.g., `this.modal.open`);
 
 ## API
 
-`open`
+`isOpen`
 
 The open state of the modal.
 
-`show`
+`settings`
+
+The settings object, which takes the form `{ component, props }`, where `component` represents the optional component inside the modal and `props` represents the optional props of that component.
+
+`component`
+
+An alias of `settings.component`.
+
+`props`
+
+An alias of `settings.props`.
+
+`open`
 
 Sets `open` state to `true`.
 
-`showWith` 
+`openWith` 
 
 Sets `open` state to true and stores a settings object of type `{ component: Component, props: Object }` which contains the current modal component and any props that should be passed to it.
 
-`hide`
+`close`
 
 Sets the `open` state to false.
 
 `toggle`
 
 Sets the `open` state to `!open`.
+
+`setComponent`
+
+Sets the inner component of the modal.
+
+`setProps`
+
+Sets any props you would like to pass to the inner component of the modal.
 
 ## License
 
