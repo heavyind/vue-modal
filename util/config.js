@@ -3,7 +3,7 @@
 export const cfgDefault = {
   store: null,
   mixin: false,
-  mixinNamespace: "modal",
+  mixinNamespace: "$modal",
   storeNamespace: "modal"
 };
 
