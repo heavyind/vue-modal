@@ -1,13 +1,7 @@
 import modalStore from "./lib/store";
-import e from "./util/e";
 import createModalMixin from "./lib/mixin";
-
-
-const cfgDefault = {
-  store: null,
-  scopeName: "modal",
-  storeName: "modal"
-};
+import * as e from "./util/e";
+import { cfgDefault } from "./util/config";
 
 
 export default {
@@ -20,7 +14,11 @@ export default {
 
     const cfg = { ...cfgDefault, ..._cfg };
 
-    cfg.store.registerModule(cfg.storeName, modalStore);
+    cfg.store.registerModule(cfg.storeNamespace, modalStore);
+
+    if (cfg.mixin) {
+      Vue.mixin(createModalMixin(cfg));
+    }
     
   },
 
