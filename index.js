@@ -1,5 +1,5 @@
 import modalStore from "./lib/store";
-import createModalMixin from "./lib/mixin";
+import { createModalMixin } from "./lib/mixin";
 import * as e from "./util/e";
 import { cfgDefault } from "./util/config";
 
