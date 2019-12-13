@@ -1,6 +1,10 @@
 <template>
-  <div v-if="$modal.isOpen" class="modal">
-    <button @click="$modal.close">Close</button>
+  <div
+    v-if="$modal.isOpen"
+    class="modal"
+    role="dialog"
+    aria-modal="true">
+    <button aria-label="close dialog" @click="$modal.close">Close</button>
     <component v-if="$modal.component" :is="$modal.component"></component>
   </div>
 </template>
