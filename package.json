@@ -2,7 +2,9 @@
   "name": "@heavyind/vue-modal",
   "version": "0.0.2",
   "description": "A modal plugin for Vue projects",
-  "main": "index.js",
+  "main": "dist/vue-modal.cjs.js",
+  "module": "dist/vue-modal.esm.js",
+  "unpkg": "dist/vue-modal.umd.js",
   "scripts": {
     "test": "test",
     "watch": "rimraf dist && rollup -c ./build/config.js --watch",
