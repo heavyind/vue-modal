@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>@heavyind/vue-modal example</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="app">
+      <modal></modal>
+      <button @click="$modal.openWith({ component: { template: '<div>Inner component</div>' } })">Open modal</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <script src="https://unpkg.com/@heavyind/vue-modal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
