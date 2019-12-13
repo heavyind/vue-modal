@@ -1,6 +1,6 @@
 {
   "name": "@heavyind/vue-modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A modal plugin for Vue projects",
   "main": "dist/vue-modal.cjs.js",
   "module": "dist/vue-modal.esm.js",
