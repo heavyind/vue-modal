@@ -4,9 +4,9 @@ var Modal = {
   template: `
     <div class='modal' v-if='$modal.isOpen'>
       <button @click='$modal.close'>Close</button>
-      <component :is='$modal.component'></component>
+      <component v-if="$modal.component" :is='$modal.component'></component>
     </div>`
-}
+};
 
 Vue.use(VueModal, { store, mixin: true });
 

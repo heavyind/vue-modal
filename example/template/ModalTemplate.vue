@@ -1,7 +1,7 @@
 <template>
   <div v-if="$modal.isOpen" class="modal">
     <button @click="$modal.close">Close</button>
-    <component :is="$modal.component"></component>
+    <component v-if="$modal.component" :is="$modal.component"></component>
   </div>
 </template>
 
@@ -25,6 +25,6 @@ export default {
   left: 0
   width: 100vw
   height: 100vh
-  background: rgba(black, 0.9)
+  background: rgba(black, 0.8)
 
 </style>
