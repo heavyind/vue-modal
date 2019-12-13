@@ -1,5 +1,5 @@
 {
-  "name": "vue-modal",
+  "name": "@heavyind/vue-modal",
   "version": "0.0.2",
   "description": "A modal plugin for Vue projects",
   "main": "index.js",
