@@ -14,8 +14,6 @@ This project is rather a Vuex API for *handling* modal components. It is abstrac
 
 ## Installation
 
-**Note** None of these will work: the package hasn't been published yet!
-
 Via npm:
 
 ```
