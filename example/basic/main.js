@@ -10,10 +10,7 @@ var Modal = {
         :is="$modal.component"
         v-bind="$modal.props">
       </component>
-    </div>`,
-  mounted () {
-    console.log(this.$modal.component);
-  }
+    </div>`
 };
 
 var Dummy = {
