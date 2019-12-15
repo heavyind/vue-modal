@@ -7,7 +7,10 @@
   <body>
     <div id="app">
       <modal></modal>
-      <button @click="$modal.open">Open modal</button>
+      <button
+        @click="$modal.openWith({ component: this.Dummy, props: { greeting: 'Hello' } })">
+        Open modal
+      </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuex"></script>
